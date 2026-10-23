@@ -21,8 +21,8 @@ export const DESIGNER_INFO = {
 
   // Contact Information (PLACEHOLDERS: Update with Rajabul Saifi's real details)
   contact: {
-    phone: "+91 98765 43210", // [PLACEHOLDER] Replace with actual contact number
-    whatsappNumber: "919876543210", // [PLACEHOLDER] Digits with country code, no + or spaces
+    phone: "+91 84498 02502",
+    whatsappNumber: "918449802502",
     email: "enquiry@rajabulinteriors.com", // [PLACEHOLDER] Replace with actual email if available
     location: "Delhi NCR, India"
   },
