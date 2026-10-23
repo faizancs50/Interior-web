@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Contact Page Styles - Fully Responsive
+   ========================================================================== */
+
+.contact-page {
+  padding-bottom: var(--space-20);
+  width: 100%;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: var(--space-12);
+  }
+}
+
+/* Contact Info Card */
+.contact-info-card {
+  background-color: var(--color-bg-white);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem) clamp(1.15rem, 3vw, 2rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info-title {
+  font-size: clamp(1.25rem, 2vw, 1.4rem);
+  margin-bottom: var(--space-5);
+}
+
+.contact-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+  min-width: 0;
+}
+
+.contact-method-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  min-width: 0;
+}
+
+@media (min-width: 480px) {
+  .contact-method-item {
+    gap: var(--space-4);
+  }
+}
+
+.contact-method-icon-wa {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(37, 211, 102, 0.12);
+  color: var(--color-whatsapp-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-method-icon-phone {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--color-accent-border);
+}
+
+.contact-method-icon-map {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+}
+
+.contact-method-label {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.contact-method-val-wa {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: 700;
+  color: var(--color-whatsapp-dark);
+  display: inline-block;
+  padding: 0.2rem 0;
+  overflow-wrap: break-word;
+}
+
+.contact-method-val-wa:hover {
+  text-decoration: underline;
+}
+
+.contact-method-val-phone {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  display: inline-block;
+  padding: 0.2rem 0;
+  white-space: nowrap;
+}
+
+.contact-method-val-phone:hover {
+  color: var(--color-accent);
+}
+
+.contact-method-val-loc {
+  font-size: clamp(0.92rem, 1.3vw, 1rem);
+  font-weight: 600;
+  color: var(--color-text-main);
+  line-height: 1.45;
+}
+
+.contact-note-box {
+  padding: var(--space-4);
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-light);
+  min-width: 0;
+}
+
+.contact-note-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-1);
+  color: var(--color-primary);
+}
+
+.contact-note-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* WhatsApp Enquiry Form */
+.enquiry-form-card {
+  background-color: var(--color-bg-white);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem) clamp(1.15rem, 3vw, 2rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.enquiry-form-title {
+  font-size: clamp(1.25rem, 2vw, 1.4rem);
+  margin-bottom: var(--space-1);
+}
+
+.enquiry-form-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.form-grid-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 520px) {
+  .form-grid-two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.enquiry-submit-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.95rem;
+  font-size: 1rem;
+  margin-top: var(--space-2);
+  justify-content: center;
+}

@@ -1,0 +1,380 @@
+/* ==========================================================================
+   Design System & Global Styles
+   Portfolio: Rajabul Saifi - Interior Designer & Execution Specialist
+   Warm cream & beige palette, elegant serif headings, high-contrast typography
+   ========================================================================== */
+
+:root {
+  /* --- Color Palette: Architectural Warm Luxe --- */
+  --color-primary: #18191d;
+  --color-primary-light: #24262c;
+  --color-primary-hover: #0d0e11;
+  
+  --color-accent: #b68735; /* Warm refined gold/brass with strong contrast */
+  --color-accent-hover: #9c7128;
+  --color-accent-soft: rgba(182, 135, 53, 0.12);
+  --color-accent-border: rgba(182, 135, 53, 0.28);
+  
+  /* WhatsApp Green */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1ea952;
+  --color-whatsapp-active: #178a42;
+  --color-whatsapp-dark: #075e54;
+  --color-whatsapp-soft: rgba(37, 211, 102, 0.14);
+  
+  /* Neutral & Warm Stone Backgrounds */
+  --color-bg-light: #faf9f6; /* Warm alabaster */
+  --color-bg-white: #ffffff;
+  --color-bg-subtle: #f4efe8; /* Warm stone cream */
+  --color-bg-card: #ffffff;
+  --color-border: #e4ded4;
+  --color-border-light: #eee9e0;
+
+  /* Typography Colors - High WCAG Contrast */
+  --color-text-main: #1f2024;
+  --color-text-muted: #52545d; /* >6.5:1 contrast against #faf9f6 and #ffffff */
+  --color-text-light: #767985;
+  --color-text-inverse: #ffffff;
+
+  /* Typography Families */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-heading: 1.28;
+  --line-height-base: 1.65;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* Responsive Section Rhythm */
+  --section-padding: clamp(2.75rem, 5vw, 5rem) 0;
+
+  /* Elevations & Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.03);
+  --shadow-float: 0 10px 28px rgba(37, 211, 102, 0.38);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --header-height: 72px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- CSS Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-base);
+  background-color: var(--color-bg-light);
+  /* Note: avoid global overflow-x: hidden on body, fix underlying layout causes */
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* --- Keyboard Accessibility Focus States --- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Typography Hierarchy --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: var(--line-height-heading);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4.5vw + 0.6rem, 3.25rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3vw + 0.5rem, 2.35rem);
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 1.8vw + 0.4rem, 1.4rem);
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --- Common Layout & Container --- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Standard Page Top Header Section */
+.page-header-wrapper {
+  padding: clamp(2.5rem, 4vw, 3.5rem) 0 clamp(2rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--color-border-light);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  background: linear-gradient(180deg, rgba(244, 239, 232, 0.6) 0%, rgba(250, 249, 246, 0.2) 100%);
+}
+
+.page-header-inner {
+  max-width: 740px;
+}
+
+.page-main-title {
+  margin-top: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-main-desc {
+  font-size: clamp(1rem, 1.2vw + 0.4rem, 1.1rem);
+  line-height: 1.65;
+}
+
+/* --- Common Badges --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent-border);
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+@media (min-width: 480px) {
+  .badge {
+    padding: 0.4rem 0.95rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* --- Reusable Buttons (Accessible, Min 44px Touch Targets) --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-align: center;
+  user-select: none;
+  max-width: 100%;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.btn-accent:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* WhatsApp Conversion Button */
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.32);
+}
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  transform: translateY(-2px);
+}
+.btn-whatsapp:focus-visible {
+  outline: 2px solid #075e54;
+  outline-offset: 3px;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-white);
+  color: var(--color-primary);
+}
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-subtle);
+  transform: translateY(-2px);
+}
+
+/* --- Form Control Defaults (Accessible & Mobile Friendly) --- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  color: var(--color-text-main);
+  font-family: inherit;
+  font-size: 1rem; /* 16px to prevent iOS Safari auto-zoom */
+  line-height: 1.5;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+/* --- Motion Reduction Preference --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

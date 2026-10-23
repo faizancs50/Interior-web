@@ -1,0 +1,274 @@
+/* ==========================================================================
+   Navbar Styles - Fully Responsive
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: rgba(250, 249, 246, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header-inner {
+    gap: var(--space-4);
+  }
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 0;
+  border-radius: var(--radius-sm);
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 3.5vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-subtitle {
+  font-size: clamp(0.62rem, 1.8vw, 0.72rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .desktop-nav {
+    gap: 1.75rem;
+  }
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  position: relative;
+  padding: 0.5rem 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.25rem;
+  right: 0.25rem;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 600px) {
+  .header-actions {
+    gap: 0.75rem;
+  }
+}
+
+/* Header WhatsApp CTA - Responsive adaptation */
+.header-cta {
+  min-height: 40px;
+  font-size: 0.88rem;
+}
+
+/* On small screens under 520px: compact icon-only to avoid crowding */
+@media (max-width: 519px) {
+  .header-cta {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .header-cta-text {
+    display: none;
+  }
+}
+
+@media (min-width: 520px) {
+  .header-cta {
+    padding: 0.55rem 1.15rem;
+    border-radius: var(--radius-md);
+  }
+
+  .header-cta-text {
+    display: inline;
+  }
+}
+
+/* Mobile Toggle Hamburger Button */
+.mobile-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  min-height: 42px;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-white);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.mobile-toggle-btn:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-accent);
+}
+
+/* Mobile Drawer Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: var(--header-height) 0 0 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 899;
+  animation: fadeIn 0.2s ease;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-menu-drawer {
+  background-color: var(--color-bg-white);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  max-height: calc(100vh - var(--header-height) - 1.5rem);
+  max-height: calc(100dvh - var(--header-height) - 1.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+@media (min-width: 480px) {
+  .mobile-menu-drawer {
+    padding: 2rem 1.75rem;
+    gap: 1.5rem;
+  }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mobile-link {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.mobile-link:hover {
+  background-color: var(--color-bg-light);
+  color: var(--color-accent);
+}
+
+.mobile-link.active {
+  color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  border-left: 3px solid var(--color-accent);
+}
+
+.mobile-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-whatsapp-full {
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+.mobile-area-note {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  .desktop-nav {
+    display: flex;
+  }
+  
+  .mobile-toggle-btn {
+    display: none;
+  }
+}
