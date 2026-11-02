@@ -172,13 +172,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
   .footer-bottom-inner {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.footer-credits {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }

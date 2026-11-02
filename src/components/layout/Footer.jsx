@@ -5,8 +5,6 @@ import WhatsAppIcon from '../common/WhatsAppIcon';
 import { DESIGNER_INFO, getWhatsAppUrl } from '../../data/designer';
 import './Footer.css';
 
-const currentYear = new Date().getFullYear();
-
 export default function Footer() {
   const footerWhatsApp = getWhatsAppUrl("Hi Rajabul, I am contacting you through your website for an interior consultation.");
 
@@ -18,7 +16,7 @@ export default function Footer() {
           <h3 className="footer-brand-title">{DESIGNER_INFO.name}</h3>
           <p className="footer-brand-subtitle">Interior Designer & Labour Team Execution</p>
           <p className="footer-brand-desc">
-            Direct on-site supervision and dedicated craftsmanship for residential and commercial spaces across Delhi NCR.
+            Direct on-site supervision and dedicated craftsmanship for residential and commercial spaces across Gurugram, Delhi, and Noida.
           </p>
           <div className="footer-trust-tag">
             <ShieldCheck size={18} />
@@ -49,7 +47,7 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <p className="footer-subtext">Available for on-site consultation and measurement visits across Delhi NCR.</p>
+          <p className="footer-subtext">Available for on-site consultation and measurement visits across Gurugram, Delhi, and Noida.</p>
         </div>
 
         {/* Contact & Conversion */}
@@ -72,7 +70,6 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p>© {currentYear} {DESIGNER_INFO.name}. All rights reserved.</p>
           <p className="footer-credits">Delhi NCR Interior Design & Execution</p>
         </div>
       </div>

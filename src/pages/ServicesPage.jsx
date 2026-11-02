@@ -15,7 +15,7 @@ export default function ServicesPage() {
             <span className="badge">Capabilities</span>
             <h1 className="page-main-title">Interior Services & Labour Execution</h1>
             <p className="page-main-desc">
-              From single-room carpentry and false ceilings to full-home turnkey interior execution across Delhi, Noida, and Greater Noida.
+              From single-room carpentry and false ceilings to full-home turnkey interior execution across Gurugram, Delhi, and Noida.
             </p>
           </div>
         </div>

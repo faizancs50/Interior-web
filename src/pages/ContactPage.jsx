@@ -7,7 +7,7 @@ import './ContactPage.css';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
-    location: 'Noida',
+    location: 'Gurugram',
     propertyType: '3BHK Apartment',
     message: ''
   });
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <span className="badge">Contact & Enquiries</span>
             <h1 className="page-main-title">Start Your Interior Project</h1>
             <p className="page-main-desc">
-              Connect directly with Rajabul Saifi for site visits, material discussions, and estimates across Delhi, Noida, and Greater Noida.
+              Connect directly with Rajabul Saifi for site visits, material discussions, and estimates across Gurugram, Delhi, and Noida.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <div>
                   <div className="contact-method-label">Service Locations</div>
                   <div className="contact-method-val-loc">
-                    Delhi, Noida, Greater Noida & Delhi NCR
+                    Gurugram • Delhi • Noida
                   </div>
                 </div>
               </div>
@@ -145,10 +145,10 @@ export default function ContactPage() {
                   onChange={handleChange}
                   className="form-select"
                 >
-                  <option value="Noida">Noida</option>
-                  <option value="Greater Noida">Greater Noida</option>
+                  <option value="Gurugram">Gurugram</option>
                   <option value="Delhi">Delhi</option>
-                  <option value="Other Delhi NCR">Other Delhi NCR</option>
+                  <option value="Noida">Noida</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 

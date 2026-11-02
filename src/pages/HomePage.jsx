@@ -13,12 +13,12 @@ export default function HomePage() {
   return (
     <div className="home-page">
       {/* 1. HERO SECTION */}
-      <section className="hero-section bbb" aria-label="Introduction">
+      <section className="hero-section" aria-label="Introduction">
         <div className="container hero-container">
           <div className="hero-content">
             <div className="badge">
               <MapPin size={14} aria-hidden="true" />
-              <span>Delhi • Noida • Greater Noida</span>
+              <span>Gurugram • Delhi • Noida</span>
             </div>
             <h1 className="hero-title">
               Crafting Thoughtful Interiors with Direct Site Execution
@@ -64,13 +64,13 @@ export default function HomePage() {
           <div className="hero-media">
             <div className="hero-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80"
-                alt="Contemporary interior execution with modular wood finishes in Delhi NCR"
+                src="/images/projects/Living Room/78d10c45-348b-4c86-90f8-942b36a10bc9.png"
+                alt="Luxury living room interior execution with custom wood panelling and ambient lighting by Rajabul Saifi"
                 className="hero-image"
                 fetchPriority="high"
                 decoding="async"
-                width="600"
-                height="480"
+                width="1448"
+                height="1086"
               />
               <div className="hero-floating-card">
                 <Hammer size={24} className="card-icon" aria-hidden="true" />
@@ -120,7 +120,7 @@ export default function HomePage() {
               <span className="section-eyebrow">Work Showcase</span>
               <h2>Recent Completed Projects</h2>
               <p className="section-description">
-                Explore real spaces brought to life across Delhi, Noida, and Greater Noida.
+                Explore real spaces brought to life across Gurugram, Delhi, and Noida.
               </p>
             </div>
             <Link to="/projects" className="btn btn-outline preview-all-btn">
@@ -204,7 +204,7 @@ export default function HomePage() {
             <div className="cta-banner-content">
               <h2>Have a Flat or Villa Ready for Interior Work?</h2>
               <p>
-                Speak directly with Rajabul Saifi. Get practical site advice, honest cost estimates, and scheduled on-site consultation across Delhi, Noida, or Greater Noida.
+                Speak directly with Rajabul Saifi. Get practical site advice, honest cost estimates, and scheduled on-site consultation across Gurugram, Delhi, or Noida.
               </p>
             </div>
             <div className="cta-banner-actions">

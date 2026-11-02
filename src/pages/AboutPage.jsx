@@ -56,7 +56,7 @@ export default function AboutPage() {
             </div>
             <h2 className="about-pillar-title">Delhi NCR Roots</h2>
             <p className="about-pillar-text">
-              Operating actively across Delhi, Noida, and Greater Noida with localized vendor networks for wood, hardware, and surface finishes.
+              Operating actively across Gurugram, Delhi, and Noida with localized vendor networks for wood, hardware, and surface finishes.
             </p>
           </div>
         </div>

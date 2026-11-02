@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* Brand / Logo */}
         <Link to="/" className="brand-logo" onClick={closeMenu} aria-label={`${DESIGNER_INFO.name} - Home`}>
           <span className="brand-name">{DESIGNER_INFO.name}</span>
-          <span className="brand-subtitle">Interiors & Execution • Delhi NCR</span>
+          <span className="brand-subtitle">Interiors & Execution</span>
         </Link>
 
         {/* Desktop Navigation Links */}
@@ -133,7 +133,7 @@ export default function Navbar() {
                 <span>Chat on WhatsApp</span>
               </a>
               <div className="mobile-area-note">
-                Serving: Delhi, Noida, Greater Noida
+                Serving: Gurugram • Delhi • Noida
               </div>
             </div>
           </div>

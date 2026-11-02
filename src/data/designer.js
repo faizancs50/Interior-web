@@ -13,10 +13,9 @@ export const DESIGNER_INFO = {
   
   // Service Areas
   serviceAreas: [
+    "Gurugram",
     "Delhi",
-    "Noida",
-    "Greater Noida",
-    "Delhi NCR"
+    "Noida"
   ],
 
   // Contact Information (PLACEHOLDERS: Update with Rajabul Saifi's real details)
@@ -42,8 +41,8 @@ export const DESIGNER_INFO = {
       description: "Direct labour management ensures competitive pricing without sacrificing material quality."
     },
     {
-      title: "Delhi NCR Coverage",
-      description: "Active execution capabilities across Delhi, Noida, and Greater Noida."
+      title: "Regional Coverage",
+      description: "Active execution capabilities across Gurugram, Delhi, and Noida."
     }
   ]
 };
